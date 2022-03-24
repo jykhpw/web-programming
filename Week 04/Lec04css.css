@@ -1,6 +1,6 @@
 p { font-size: 10pt }
 .red1 { color:red; font-style:italic; } /* red1 클래스=빨간색 이탤릭*/
-strong.red1 { font-size:12pt; } /**/
+strong.red1 { font-size:12pt; }
 #next { color:blue; text-align:center; }
 
 a:link { color: blue; }
