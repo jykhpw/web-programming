@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>자바스크립트 기본 문법1</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            // p.13 - 자바스크립트 변수 선언 예제
+            var index, name = "모바일 웹";
+            var start = 0, end = 100.0;
+            var message, condition, sender, receiver;
+
+            var a = "3";
+            var b = 2;
+            c = b + 3 + a;
+            d = a + b;
+
+            document.write("c: " + c + ", d: " + d + '<br/><br/>');
+
+            // p.15 자바스크립트 문자열 붙이기 연산 예제
+            var first_name = "Steve";
+            var last_name ="Jobs";
+            var full_name1 = first_name + " " + last_name; // full_name1: "Steve Jobs"
+            var full_name2 = last_name + ", " + first_name; // full_name2: "Jobs, Steve"
+
+            document.write("full_name1: " + full_name1 + '<br/>');
+            document.write("full_name2: " + full_name2 + '<br/><br/>');
+
+            // p.17 변수 형변환 예제
+            var length = 123, length_num, length_str;
+
+            length_num = length + 10;
+            length_str = length.toString() + 10;
+
+            document.write("Length in Number: " + length_num + "cm" + '<br/>');
+            document.write("Length in String: " + length_str + "cm" + '<br/>');
+
+            var num = parseInt(length_str) + 20;
+            document.write("Length in integer: " + num + "cm" + '<br/>');
+        </script>
+    </body>
+</html>

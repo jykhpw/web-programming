@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>자바스크립트 반복문(do-while문)</title>
+    </head>
+    <body>
+        <!-- p.31 do-while문 반복문 예제 -->
+        <table border="1">
+        <script type="text/javascript">
+            document.write("<tr>");
+            document.write("<td> Value </td>");
+
+            fib1 = 1;
+            fib2 = 1;
+            do {
+                document.write("<td>" + fib2 + "</td>");
+                tmp = fib1 + fib2;
+                fib1 = fib2;
+                fib2 = tmp;
+            } while(fib2 < 1000)
+            
+            document.write("</tr>");
+        </script>
+        </table>
+    </body>
+</html>
