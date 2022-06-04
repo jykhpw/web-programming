@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>보이기 스타일 속성 변경 예제</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            function toggleVisibility(id) {
+                var dom = document.getElementById(id);
+
+                if (dom.style.visibility == "visible")
+                    dom.style.visibility = "hidden";
+                else
+                    dom.style.visibility == "visible";
+            }
+        </script>
+
+        ToggleVisibility:
+        <button onclick="toggleVisibility('img1');">Image1</button>
+        <button onclick="toggleVisibility('img2');">Image2</button>
+        <button onclick="toggleVisibility('img3');">Image3</butoon>
+    </body>
+</html>

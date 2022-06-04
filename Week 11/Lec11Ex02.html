@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>요소 속성에 이벤트 핸들러 기술</title>
+    </head>
+    <body>
+        <!--
+        <form action="">
+            <input id="username" type="text" value="Name of User"
+                onclick="alert('Please type your full name');"/>
+        </form>
+        -->
+        <form action="">
+            <input id="username" type="text" value="Name of User"
+                onclick="myEventHandler();"/>
+        </form>
+        <script type="text/javascript">
+            function myEventHandler() {
+                alert("Please type your full name");
+            }
+        </script>
+    </body>
+</html>

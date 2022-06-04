@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>위치 스타일 속성 변경</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            function changePositions() {
+                for (i = 1; i <=3; i++){
+                    var left = document.getElementById("left" + i).value;
+                    var top = document.getElementById("top" + i).value;
+                    document.getElementById("img" + 1).style.left = left + "px";
+                    document.getElementById("img" + 1).style.top = top + "px";
+                }
+            }
+        </script>
+
+        <form>
+            Image1: Left <input id="left1" size="2" type="text"/>
+            Top <input id="top1" size="2" type="text"/><br/>
+
+            Image2: Left <input id="left2" size="2" type="text"/>
+            Top <input id="top2" size="2" type="text"/><br/>
+
+            Image3: Left <input id="left3" size="2" type="text"/>
+            Top <input id="top3" size="2" type="text"/>
+
+            <input type="button" value="Move All" onclick="changePositions();"/>
+        </form>
+    </body>
+
+</html>

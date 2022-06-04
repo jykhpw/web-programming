@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>배경색 스타일 속성 변경하기</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            function changeColor(id, color){
+                document.getElementById(id).style.background = color;
+            }
+        </script>
+
+        Outer Box:
+        <button onclick="changeColor('outerBox', 'red');">Red</button>
+        <button onclick="changeColor('outerBox', 'green');">Green</button>
+        <button onclick="changeColor('outerBox', 'blue');">Blue</button>
+
+        Inner Box:
+        <button onclick="changeColor('innerBox', 'red');">Red</button>
+        <button onclick="changeColor('innerBox', 'green');">Green</button>
+        <button onclick="changeColor('innerBox', 'blue');">Blue</button>
+    </body>
+</html>
