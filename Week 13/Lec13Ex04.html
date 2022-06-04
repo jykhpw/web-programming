@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>파일 불러오기 예제 2</title>
+        <meta charset="utf-8"/>
+    </head>
+    <body>
+        <form>
+            Image File <input type="file" id="img_btn"/> <br>
+            <img id="img_output"/> <br>
+            Text File <input type="file" id="txt_btn"/> <br>
+            <textarea id="txt_output"></textarea>
+        </form>
+        <script type="text/javascript">
+            function read_img(e) {
+                var input = e.target;
+                var reader = new FileReader();
+                reader.onload = function() {
+                    var dataURL = reader.result;
+                    document.getElementById("img_output").src = dataURL;
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+            document.getElementById("img_btn").onchange = read_img;
+
+            function read_txt(e) {
+                var input = e.target;
+                var reader = new FileReader();
+                reader.onload = function() {
+                    var text = reader.result;
+                    document.getElementById("txt_output").value = text;
+                }
+                reader.readAsText(input.files[0]);
+            }
+            document.getElementById("txt_btn").onchange = read_txt;
+        </script>
+    </body>
+</html>

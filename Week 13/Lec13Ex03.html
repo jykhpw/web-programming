@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>파일 불러오기 예제 1</title>
+    </head>
+    <body>
+        <form>
+            <input type="file" id="file_btn" multiple/> <br>
+            <table> <tr> <td id="list"></td></tr></table>
+        </form>
+
+        <script type="text/javascript">
+            function handleFileSelect(e) {
+                var files = e.target.files; // FileList object
+
+                // files is a fileList of File objects.
+                var str = "<ul>";
+                for (var i = 0, f; f = files[i]; i++) {
+                    var lastDate = f.lastModifiedDate;
+                    str = str + "<li><strong>" + f.name + "</strong> (" + f.type + ") - "
+                            + f.size + " bytes, "
+                            + "last modified: " + lastDate.toLocaleDateString() + "</li>";
+                }
+                document.getElementById("list").innerHTML = "<ul>" + str + "</ul>";
+            }
+
+            document.getElementById("file_btn").onchange = handleFileSelect;
+        </script>
+    </body>
+</html>
