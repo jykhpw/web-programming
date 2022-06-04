@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>드래그 정보 보여주기 예제</title>
+    </head>
+    <body>
+        <div id="dragsrc" style="display:block;">
+            <img id="html5" src="Data/icon_html5.png" style="display:inline; width:150px;" draggable="true">
+            <img id="css3" src="Data/icon_css3.png" style="display:inline; width:150px;" draggable="false">
+            <img id="js" src="Data/icon_js.png" style="display:inline; width:150px;">
+        </div>
+        <div id="dragprocess"></div>
+        <script type="text/javascript">
+            var src = document.getElementById("dragsrc"), srcid, i = 0;
+            process = document.getElementById("dragprocess");
+
+            src.ondragstart = function(e) {
+                srcid = e.target.id;
+                process.innerHTML = "start: " + srcid + "<br/>";
+            }
+            src.ondrag = function(e) {
+                process.innerHTML = "start: " + srcid + "<br/>drag: " + srcid + " [" + (i++) + "]";
+            }
+            src.ondragend = function(e) {
+                process.innerHTML += "<br/>end: " + srcid + "<br/>";
+            }
+        </script>
+    </body>
+</html>

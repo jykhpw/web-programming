@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>캔버스 시작하기</title>
+    </head>
+    <body>
+        <!-- 캔버스 요소 정의 -->
+        <canvas id="myCanvas" width="300" height="200"></canvas>
+        <script type="text/javascript">
+            var canvas = document.getElementById("myCanvas");
+            var myContext = canvas.getContext("2d"); // 캔버스 컨택스트 가져오기
+            // 그림을 그리는 자바 스크립트 코드
+            myContext.moveTo(50, 50);
+            myContext.lineTo(200, 50);
+            myContext.stroke();
+        </script>
+    </body>
+</html>
